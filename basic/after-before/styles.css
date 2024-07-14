@@ -1,0 +1,16 @@
+button {
+  padding: 15px 25px;
+  background: green;
+  border: none;
+  color: white;
+}
+
+button::after {
+  content: " WS";
+  color: red;
+}
+
+button::before {
+  content: "About US ";
+  color: black;
+}

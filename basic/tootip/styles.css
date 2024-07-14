@@ -1,0 +1,33 @@
+button {
+  padding: 15px 25px;
+  background: red;
+  border: none;
+  color: white;
+  position: relative;
+  display: table;
+  margin: 100px auto;
+}
+
+button::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -22%;
+  left: 40%;
+  background: blue;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+button::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  background: blue;
+  transform: rotate(45deg);
+  z-index: -1;
+}

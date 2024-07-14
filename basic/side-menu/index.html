@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <span class="ticon">&#9776</span>
+    <div class="menu">
+        <span class="close">&times</span>
+        <h2>LOGO</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">Enquiry</a></li>
+        </ul>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+  
+        let menu = document.querySelector(".menu");
+        let tIcon = document.querySelector(".ticon");
+        let close = document.querySelector(".close");
+        tIcon.addEventListener("click", ()=>{
+            menu.classList.add("showmenu");
+        });
+        close.addEventListener("click", ()=> {
+            menu.classList.remove("showmenu");
+        });
+   
+  </script>
+</html>

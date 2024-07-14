@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.card {
+  width: 4%;
+  height: 80vh;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.card:nth-child(1) {
+  background-image: url("images/1.jpg");
+}
+.card:nth-child(2) {
+  background-image: url("images/2.jpg");
+}
+.card:nth-child(3) {
+  background-image: url("images/3.jpg");
+}
+.card:nth-child(4) {
+  background-image: url("images/4.jpg");
+}
+.card:nth-child(5) {
+  background-image: url("images/5.jpg");
+}
+
+.card h3 {
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.card p {
+  font-size: 22px;
+  text-shadow: 0px 0px 5px black;
+  opacity: 0;
+}
+
+.active {
+  width: 80%;
+}
+
+.active h3 {
+  opacity: 1;
+  transition: 0.7s ease-in;
+}
+
+.active p {
+  opacity: 1;
+  transition: 1s ease-in;
+}
