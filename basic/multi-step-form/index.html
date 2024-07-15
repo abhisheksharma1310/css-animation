@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form action="" class="form1">
+        <h1>Create Account</h1>
+        <input type="email" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="password" name="password" placeholder="Confirm Password" />
+        <div class="btns">
+          <button type="button" onclick="nextToForm2()">Next</button>
+        </div>
+      </form>
+
+      <form action="" class="form2">
+        <h1>Personal Details</h1>
+        <input type="text" name="First Name" placeholder="First Name" />
+        <input type="text" name="Last Name" placeholder="Last Name" />
+        <input type="text" name="Mobile no." placeholder="Mobile no." />
+        <div class="btns">
+          <button type="button" onclick="prevToForm1()">Prev</button>
+          <button type="button" onclick="nextToForm3()">Next</button>
+        </div>
+      </form>
+
+      <form action="" class="form3">
+        <h1>Social Links</h1>
+        <input type="text" name="Linkedin" placeholder="Linkedin" />
+        <input type="text" name="Github" placeholder="Github" />
+        <input type="text" name="Medium" placeholder="Medium" />
+        <div class="btns">
+          <button type="button" onclick="prevToForm2()">Prev</button>
+          <button type="button">Submit</button>
+        </div>
+      </form>
+      <div class="progress">
+        <div class="progress-bar"></div>
+        <div class="steps">Step 1</div>
+        <div class="steps">Step 2</div>
+        <div class="steps">Step 3</div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const forms = document.querySelectorAll("form");
+    const progressBar = document.querySelector(".progress-bar");
+    const nextToForm2 = () => {
+      forms[0].style.left = "-100%";
+      forms[1].style.left = "0";
+      progressBar.style.width = "66%";
+    };
+    const prevToForm1 = () => {
+      forms[0].style.left = "0";
+      forms[1].style.left = "100%";
+      progressBar.style.width = "33%";
+    };
+    const nextToForm3 = () => {
+      forms[2].style.left = "0";
+      forms[1].style.left = "-100%";
+      progressBar.style.width = "100%";
+    };
+    const prevToForm2 = () => {
+      forms[2].style.left = "100%";
+      forms[1].style.left = "0";
+      progressBar.style.width = "66%";
+    };
+  </script>
+</html>
