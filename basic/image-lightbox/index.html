@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Lightbox Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="galleryOverlay"></div>
+    <div class="imageBox">
+      <span>&times</span>
+      <img src="" alt="" />
+    </div>
+    <div class="container" id="gallery">
+      <div class="galleryItems">
+        <img
+          src="https://wallup.net/wp-content/uploads/2016/03/10/318375-nature-landscape-lake-mountain-forest-wildflowers-spring-pine_trees-path-Switzerland-HDR.jpg"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://th.bing.com/th/id/OIP.yLf7kQVaLpxqCZX1VRHw-wHaEK?rs=1&pid=ImgDetMain"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://www.thewowstyle.com/wp-content/uploads/2015/01/1-beautiful-nature-backgrounds-nature-wallpapers-nature-landscape-photo-nature-wallpapers-1024x640.jpeg"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://www.thewowstyle.com/wp-content/uploads/2015/01/3d-abstract_widewallpaper_nature-frame_47491-1024x640.jpg"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://www.thewowstyle.com/wp-content/uploads/2015/01/6-autumn-nature-sandbox-images_2053316-1024x576.jpg"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://www.thewowstyle.com/wp-content/uploads/2015/01/1280_1024_nature_scene_wallpaper_1600FG100_029-1024x819.jpg"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://www.thewowstyle.com/wp-content/uploads/2015/01/6921986-desktop-wallpaper-nature-1024x640.jpg"
+          alt="nature1"
+        />
+      </div>
+      <div class="galleryItems">
+        <img
+          src="https://www.thewowstyle.com/wp-content/uploads/2015/01/Beautiful-Birds-beautiful-nature-23813827-1600-1200-1024x768.jpg"
+          alt="nature1"
+        />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let overlay = document.querySelector(".galleryOverlay");
+    let imageBox = document.querySelector(".imageBox");
+    let image = document.querySelector(".imageBox img");
+    let close = document.querySelector(".imageBox span");
+    let gallery = document.querySelector("#gallery");
+    gallery.addEventListener("click", (event) => {
+      let currentImagePath = event.target.src;
+      if (currentImagePath) {
+        overlay.classList.add("galleryOverlayShow");
+        imageBox.classList.add("imageBoxShow");
+        image.src = currentImagePath;
+      }
+    });
+    close.addEventListener("click", () => {
+      overlay.classList.remove("galleryOverlayShow");
+      imageBox.classList.remove("imageBoxShow");
+    });
+  </script>
+</html>
